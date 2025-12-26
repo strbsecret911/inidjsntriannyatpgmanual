@@ -25,8 +25,8 @@ body{
 
   /* Background dominan C9DBF0 */
   background:
-    radial-gradient(900px 460px at 22% 12%, var(--c-200), transparent 60%),
-    radial-gradient(820px 460px at 82% 18%, var(--c-300), transparent 62%),
+    radial-gradient(900px 460px at 22% 12%, var(--c-200), transparent 100%),
+    radial-gradient(820px 460px at 82% 18%, var(--c-300), transparent 100%),
     linear-gradient(180deg, var(--c-100), var(--c-50));
 
   /* IMPORTANT: body jangan grid supaya mobile gak “geser” */
