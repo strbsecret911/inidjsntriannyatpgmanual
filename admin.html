@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin - Update Pending</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Admin</h1>
+
+    <div id="authState" class="sub">Status: mengecek login…</div>
+
+    <div class="row">
+      <button id="btnLogin">Login Google</button>
+      <button id="btnLogout" class="secondary">Logout</button>
+    </div>
+
+    <hr />
+
+    <label class="sub" for="inputPending">Jumlah pending</label>
+    <input id="inputPending" type="number" min="0" step="1" placeholder="contoh: 8" />
+
+    <div class="row">
+      <button id="btnSave">Simpan</button>
+      <button id="btnMinus" class="secondary">-1</button>
+      <button id="btnPlus" class="secondary">+1</button>
+    </div>
+
+    <p class="sub">
+      Update terakhir: <span id="updatedAt">—</span>
+    </p>
+
+    <p id="msg" class="hint"></p>
+
+    <a class="adminLink" href="./index.html">← Kembali ke publik</a>
+  </main>
+
+  <script type="module" src="./admin.js"></script>
+</body>
+</html>
