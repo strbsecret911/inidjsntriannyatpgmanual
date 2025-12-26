@@ -9,9 +9,8 @@
   --c-700:#234E80;
   --c-800:#19385C;
   --c-900:#0F2238;
-  --c-950:#050C14;
 
-  --shadow: 0 12px 34px rgba(15,34,56,0.14);
+  --shadow: 0 10px 28px rgba(15,34,56,0.12);
   --ring: 0 0 0 3px rgba(55,123,200,0.25);
 }
 
@@ -22,89 +21,83 @@ body{
   margin:0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
   color:var(--c-900);
-
-  /* Background dominan C9DBF0 */
-  background: var(--c-100)
-
-  /* IMPORTANT: body jangan grid supaya mobile gak “geser” */
-  display:block;
+  background: var(--c-100);
 }
 
-/* Wrapper agar card benar-benar ketengah di mobile */
+/* CENTER WRAPPER (mobile safe) */
 .page{
-  min-height: 100svh;     /* stabil di mobile (address bar) */
+  min-height:100svh;
   display:grid;
   place-items:center;
-  padding: 18px;
+  padding:18px;
 }
 
 /* CARD */
 .card{
-  width: min(560px, 92vw);
+  width:min(520px, 92vw);
   background: var(--c-50);
-  border-radius: 22px;
-  padding: 18px;
-  box-shadow: var(--shadow), inset 0 0 0 1px rgba(55,123,200,0.16);
+  border-radius:22px;
+  padding:20px 18px;
+  box-shadow: var(--shadow), inset 0 0 0 1px rgba(55,123,200,.14);
 }
 
-/* TITLE */
+/* TITLE — mirip topupgram */
 h1{
-  margin:0 0 10px;
-  font-size:22px;
-  font-weight:850;
-  letter-spacing: .2px;
+  margin:0 0 12px;
+  font-size:21px;
+  font-weight:800;
   color:var(--c-800);
 }
 
-/* BIG NUMBER */
+/* BIG NUMBER AREA */
 .big{
   display:flex;
   align-items:baseline;
-  gap:10px;
-  margin: 10px 0 6px;
+  gap:8px;
+  margin: 6px 0 10px;
 }
 
 .big span:first-child{
-  font-size:56px;
+  font-size:46px;      /* DISAMAKAN */
   font-weight:900;
   line-height:1;
   color:var(--c-500);
 }
 
 .label{
-  font-size:15px;
-  font-weight:800;
+  font-size:16px;      /* DISAMAKAN */
+  font-weight:700;
   color:var(--c-700);
 }
 
 /* TEXT */
 .sub{
-  margin:10px 0 0;
-  font-size:14px;
+  margin:6px 0 0;
+  font-size:14px;      /* DISAMAKAN */
   color:var(--c-800);
 }
 
 .hint{
-  margin-top:8px;
-  font-size:13px;
+  margin-top:6px;
+  font-size:13px;      /* DISAMAKAN */
   color:var(--c-700);
 }
 
-/* ADMIN PAGE ELEMENTS */
+/* ADMIN ELEMENTS */
 input{
   width:100%;
-  padding:12px 12px;
+  padding:12px;
   border-radius:12px;
   border:1px solid var(--c-200);
   background:#fff;
-  font-size:16px;
+  font-size:15px;
   color:var(--c-900);
-  outline:none;
 }
 
 input:focus{
+  outline:none;
   border-color:var(--c-500);
-  box-shadow: var(--ring);
+  box-shadow:var(--ring);
 }
 
 .row{
@@ -120,11 +113,12 @@ button{
   border:1px solid var(--c-300);
   background: var(--c-200);
   color:var(--c-900);
-  font-weight:800;
+  font-size:14px;
+  font-weight:700;
   cursor:pointer;
 }
 
-button:hover{ background: var(--c-300); }
+button:hover{ background:var(--c-300); }
 
 button.primary{
   background: var(--c-500);
@@ -132,26 +126,29 @@ button.primary{
   border-color:var(--c-500);
 }
 
-button.primary:hover{ background: var(--c-600); }
+button.primary:hover{ background:var(--c-600); }
 
-button.secondary{ background: var(--c-100); }
+button.secondary{ background:var(--c-100); }
 
 button:disabled{
   opacity:.55;
   cursor:not-allowed;
 }
 
-/* SMALL NOTE */
+/* FOOTER NOTE */
 .footerNote{
-  margin-top:12px;
+  margin-top:10px;
   font-size:12px;
   color:var(--c-700);
 }
 
-/* Mobile rapihin */
-@media (max-width: 420px){
-  .page{ padding: 14px; }
-  .card{ padding: 16px; border-radius: 20px; }
-  h1{ font-size: 20px; }
-  .big span:first-child{ font-size: 52px; }
+/* MOBILE FINE TUNE */
+@media (max-width:420px){
+  .card{
+    padding:18px 16px;
+    border-radius:20px;
+  }
+  h1{ font-size:20px; }
+  .big span:first-child{ font-size:44px; }
+  .label{ font-size:15px; }
 }
